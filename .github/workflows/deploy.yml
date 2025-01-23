@@ -30,6 +30,7 @@ jobs:
           PULUMI_CONFIG_PASSPHRASE="" pulumi stack init prod || true
           PULUMI_CONFIG_PASSPHRASE="" pulumi config set vercel:team ${{ secrets.VERCEL_TEAM }}
           PULUMI_CONFIG_PASSPHRASE="" pulumi config set vercel:apiToken --secret ${{ secrets.VERCEL_TOKEN }}
+          pulumi install
 
       - name: Deploy with Pulumi
         working-directory: .pulumi
