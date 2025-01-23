@@ -25,8 +25,8 @@ jobs:
       - name: Configure Pulumi
         run: | 
           pulumi login --local
-          PULUMI_CONFIG_PASSPHRASE="" pulumi config set vercel:team ${{ VERCEL_TEAM }}
-          PULUMI_CONFIG_PASSPHRASE="" pulumi config set vercel:apiToken --secret ${{ VERCEL_TOKEN }}
+          PULUMI_CONFIG_PASSPHRASE="" pulumi config set vercel:team ${{ secrets.VERCEL_TEAM }}
+          PULUMI_CONFIG_PASSPHRASE="" pulumi config set vercel:apiToken --secret ${{ secrets.VERCEL_TOKEN }}
 
       - name: Deploy with Pulumi
         env:
