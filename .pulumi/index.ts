@@ -23,7 +23,7 @@ const project = new vercel.Project(packageName, {
     type: "github"
   },
   environments: [],
-});
+}, { ignoreChanges: ["name"] });
 
 const deployment = new vercel.Deployment(packageName, {
   projectId: project.id,
