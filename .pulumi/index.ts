@@ -14,7 +14,7 @@ const branchName = config.get("branchName") || process.env.GITHUB_REF_NAME || "m
 
 const project = new vercel.Project(packageName, {
   name: packageName,
-  buildCommand: "bun build",
+  buildCommand: "bun run build",
   installCommand: "bun install",
   framework: "nextjs",
   rootDirectory: undefined,
