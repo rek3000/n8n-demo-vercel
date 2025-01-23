@@ -1,0 +1,13 @@
+{
+    "name": "vercel",
+    "main": "index.ts",
+    "devDependencies": {
+        "@types/node": "^18",
+        "typescript": "^5.0.0"
+    },
+    "dependencies": {
+        "@pulumi/github": "^6.6.0",
+        "@pulumi/pulumi": "^3.113.0",
+        "@pulumiverse/vercel": "^1.14.3"
+    }
+}

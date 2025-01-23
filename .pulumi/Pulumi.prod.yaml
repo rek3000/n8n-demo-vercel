@@ -1,0 +1,8 @@
+encryptionsalt: v1:MU3c9ld1fXw=:v1:IciWXzdaoG1UyI3r:S55K3ma+xHb4C0pf+2PVPFRlOGIYbQ==
+config:
+  aws:region: us-east-1
+  github:token:
+    secure: v1:l+BGy735Yd6wjWwe:iaI7R/0/z2b6aNsRfB8vFxTXbrNG6ce2RE4JaFrw7IcNplLvgev1N0LweQRrovZS/w0Xx2bIt7g=
+  vercel:apiToken:
+    secure: v1:aDqk+DFjPBDbYYUq:QXLXKt/AqCZSm0fg00twlwCjPg4aW/0ARwNi/iHsC2BgvOiGh44cLg==
+  vercel:team: reks-projects-91d8f7d1
