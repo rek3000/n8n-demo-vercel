@@ -1,0 +1,6 @@
+name: vercel
+description: A minimal Vercel Pulumi program
+runtime:
+  name: nodejs
+  options:
+    packagemanager: pnpm
