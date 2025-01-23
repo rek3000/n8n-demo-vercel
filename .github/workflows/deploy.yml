@@ -26,6 +26,7 @@ jobs:
       - name: Configure Pulumi
         working-directory: .pulumi
         run: | 
+          npm install -g pnpm
           pulumi login --local
           PULUMI_CONFIG_PASSPHRASE="" pulumi stack init prod || true
           PULUMI_CONFIG_PASSPHRASE="" pulumi config set vercel:team ${{ secrets.VERCEL_TEAM }}
