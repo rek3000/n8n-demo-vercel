@@ -8,6 +8,7 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -23,12 +24,14 @@ jobs:
           pulumi-version: latest
 
       - name: Configure Pulumi
+        working-directory: .pulumi
         run: | 
           pulumi login --local
           PULUMI_CONFIG_PASSPHRASE="" pulumi config set vercel:team ${{ secrets.VERCEL_TEAM }}
           PULUMI_CONFIG_PASSPHRASE="" pulumi config set vercel:apiToken --secret ${{ secrets.VERCEL_TOKEN }}
 
       - name: Deploy with Pulumi
+        working-directory: .pulumi
         env:
           GITHUB_REF_NAME: ${{ github.ref_name }}
         run: PULUMI_CONFIG_PASSPHRASE="" pulumi up --yes
